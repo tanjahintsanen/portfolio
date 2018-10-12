@@ -1,0 +1,32 @@
+.navbar-custom {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  background-color: transparent;
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        @include heading-font;
+        font-size: 1.8rem;
+        color: $black;
+        float: right;
+        padding: 0;
+        margin-bottom: 0.3em;
+        background-color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse{
+    justify-content: flex-end;
+  }
+  .navbar-expand-lg .navbar-nav{
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+

@@ -1,0 +1,22 @@
+@mixin heading-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1;
+  line-height: 1;
+}
+
+@mixin subheading-font{
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+@mixin decorative-font{
+	font-family: 'Mr Dafoe', cursive;
+}
+
+@mixin body-font {
+ 	font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}

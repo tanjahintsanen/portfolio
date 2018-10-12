@@ -1,0 +1,45 @@
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  text-transform: uppercase;
+  padding: 1.25rem 3rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  @include subheading-font;
+  border-radius: 0;
+  position: relative; 
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: white;
+    border-color: $primary;
+    color: $primary;
+    transition: 0.6s;
+    transition-timing-function: ease;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($secondary, 10%) !important;
+    border-color: darken($secondary, 10%) !important;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem fade-out($secondary, 0.5);
+  }
+}
+
+.form-control{
+  border-radius: 2px;
+}
+
+label{
+  margin-bottom: .2rem;
+}

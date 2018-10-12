@@ -1,0 +1,406 @@
+body {
+  @include body-font;
+  font-size: 100%;
+  color: $black;
+  position: relative;
+}
+
+/** FONTS**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  @include heading-font;
+  color: $black;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2.1rem;
+}
+
+.subheading{
+	@include subheading-font;
+	color: $black;
+	font-size: 1.3rem;
+}
+
+p{
+	font-size: 1.1rem;
+	color: $black;
+	margin: 0;
+}
+
+a{
+	border-bottom: 2px solid $black;
+	color: $black;
+	text-decoration: none;
+	&:hover, &.active{
+		color: $black;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+	}
+}
+a.no-borders{border:2px solid transparent;}
+a.no-borders:hover{border:2px solid transparent;}
+
+/** BRAND **/
+.brand:hover > #first-name{
+  margin-left: 0;
+  transition: 0.4s;
+}
+
+#first-name{
+  display:block;
+  margin-left: -1.5rem;
+  transition: 0.4s;
+  margin-bottom: -5px;
+}
+
+/** NEW NAVIGATION **/
+.navbar-toggler{
+	background-color: white;
+	border-radius: 50%;
+	z-index: 4;
+  padding: 15px 12px 4px 13px;
+  position: absolute; 
+  right: 0;
+  margin: 2rem;
+  &:focus{
+    outline: none;
+  }
+}
+/* The Overlay (background) */
+.nav-overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    width: 100%;
+    height: 0;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.nav-overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.nav-overlay li{
+	list-style: none;
+}
+
+/* The navigation links inside the overlay */
+.nav-overlay a {
+  margin-bottom: 20px;
+  padding: 0;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-size: 1.55rem;
+  color: $black;
+  display: inline-block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.nav-overlay a:hover, .nav-overlay a:focus {
+    border-bottom: 1px solid $black;;
+}
+
+/* Position the close button (top right corner) */
+.nav-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .nav-overlay a {font-size: 20px}
+    .nav-overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/** BURGER TO CROSS **/
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+#nav-icon {
+  width: 35px;
+  height: 38px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 24px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 22px;
+  left: 8px;
+}
+
+/** FORM **/
+form{
+	position: relative; 
+	.form-control:focus{
+		border-color: $black;
+		box-shadow: none;
+	}
+}
+
+/** SECTIONS **/
+section, footer{
+	background-color: white;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 4rem;
+}
+
+.link{
+ border-bottom: none;
+ color: $black;
+}
+.link:before {
+	background-color: $black;
+	content: "";
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	vertical-align: middle;
+	width: 30px;
+	margin-right: 1rem;
+}
+
+#welcome{
+	min-height: 100vh;
+	padding-top: calc(10rem + 0px);
+}
+
+/** PROJECT IMAGES TEST **/
+.project-img-container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $orange;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.project-img-container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+/* VALUES */
+.frame {
+	background-color: $primary;
+	padding: 3rem;
+}
+
+.self-img{
+	max-width: 100%;
+	padding: 1rem 2rem;
+}
+
+/** CONTACT **/
+ .email{
+ 	font-size: 1.2rem;
+ }
+
+ /** MODAL **/
+.modal-header, .modal-footer{
+	border: none;
+}
+.modal-body{
+	img{
+		max-width: 100%;
+	}
+}
+
+/** RESPONSIVE STYLES **/
+
+/** PORTFOLIO BROKEN GRID **/
+
+@media(min-width:580px){
+	.content-left{
+	 	text-align: left;
+	}
+
+	.content-right{
+	 	text-align: right;
+	}
+
+		.project-heading-row .content-left{
+			img{
+				float: left;
+			}
+		 	h3{
+			 	margin-left: -3rem;
+			 	margin-top: 7rem;
+			 	text-align:left;
+		 	}
+		} 
+
+	.project-heading-row .content-right{
+		img{
+			float: right;
+		}
+		h3{
+		 	margin-right: -3rem;
+		 	margin-top: 7rem;
+		 	text-align: right;
+		 }
+	}	
+}
+
+@media (min-width: 992px) {
+
+	h1{font-size: 3.6rem;}
+  h2{font-size: 2.7rem;}
+  h3{font-size: 2.5rem;}
+
+  section {
+    padding-top: calc(1rem + 55px);
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+  }
+  #welcome{
+  	padding-top: calc(7rem);		
+  }	
+  .brand-and-info{
+  	margin-bottom: 5rem;
+  }
+  #first-name{
+	  margin-left: -2.5rem;
+	}
+	.subheading{
+		font-size: 1.5rem;
+	}
+	.link:before {
+		width: 50px;
+	}
+	.frame {
+		background-color: $primary;
+		padding: 4rem;
+		margin: 0 8rem;
+	}
+	.self-img{
+		padding: 2rem 4rem;
+	}
+}
+
+
+

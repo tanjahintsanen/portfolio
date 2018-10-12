@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tanja Hintsanen - Web designer & developer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald:300|Ubuntu:300,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+    <!--Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      /* Open */
+      function openNav() {
+        var menuOverlay = document.getElementById("myNav");
+        var menuIcon = document.getElementById("nav-icon");
+        var menuButton = document.getElementById("nav-button");
+        menuOverlay.style.height = "100%";
+        menuButton.setAttribute("onClick", "closeNav()");
+        menuIcon.classList.add('open');
+      }
+      /* Close */
+      function closeNav() {
+        var menuOverlay = document.getElementById("myNav");
+        var menuIcon = document.getElementById("nav-icon");
+        var menuButton = document.getElementById("nav-button");
+        menuOverlay.style.height = "0%";
+        menuButton.setAttribute("onClick", "openNav()");
+        menuIcon.classList.remove('open');
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    
+    <!-- Navigation -->
+    <nav class="fixed-top">
+      <button id="nav-button" class="navbar-toggler" type="button" onclick="openNav()">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <!-- The overlay -->
+      <div id="myNav" class="nav-overlay">
+
+
+        <!-- Overlay content -->
+        <div class="nav-overlay-content">
+          <ul>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="#welcome">Lyhyesti</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="#projects">Projektit</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="#services">Periaatteet</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="#contact">Ota yhteyttä</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <section id="welcome" class="text-left">
+      <div class="container">
+        <div class="brand-and-info">
+          <div class="row justify-content-center mx-3 mb-3">
+            <div class="col-lg-8 text-center">
+              <h1><a class="brand no-borders" href="#welcome"><span id="first-name">Tanja</span>Hintsanen</a></h1>
+              <h3 class="subheading mb-5">Web designer & developer</h3>
+            </div>
+          </div>
+          <div class="row justify-content-center mx-3 mb-3">
+            <div class="col-lg-8">
+              <div>
+                <p class="mb-3 text-center">Web designer & developer Tampereelta. Suunnittelen ja toteutan verkkosivuja pienille yhteisöille ja tapahtumille. Sinun tavoitteesi on minun tavoitteeni. Suunnitellaan yhdessä juuri sinun tarpeisiisi sopiva verkkopalvelu. Tehdään rauhassa ja tehdään huolella. Teen nettisivuja pääasiassa Wordpress-alustalle, mutta muustakin voidaan sopia. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Tutustu töihin</a></div>
+          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Palvelut & periaatteet</a></div>
+          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Ota yhteyttä</a></div>
+        </div>
+      </div>
+    </section>
+<!--
+    <section>
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-4 project-img-container">
+            <img src="img/viljatar.jpg" alt="project_image" class="image">
+            <div class="overlay">
+              <div class="subheading text">Vanajan & Viljatar</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 project-img-container">
+            <img src="img/viljatar.jpg" alt="project_image" class="image">
+            <div class="overlay">
+              <div class="subheading text">Vanajan & Viljatar</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 project-img-container">
+            <img src="img/senni.jpg" alt="project_image" class="image">
+            <div class="overlay">
+              <div class="subheading text">Senni</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <section id="projects" class="text-left">
+      <div class="container">
+        <h2 class="offset-lg-2 mb-5">Projektit</h2>
+        <div class="project-section mb-5">
+          <div class="row project-heading-row mb-3">
+            <div class="col-12 col-sm-8 col-md-6 content-right portfolio-image-container mb-3">
+              <a href="#"><img src="img/viljatar.jpg"></a>
+            </div>
+            <div class="col-12 col-sm-4 col-md-6 content-left">
+              <h3>Vanajan & <br>Viljatar</h3>
+            </div>
+          </div>
+          <div class="row ml-3">
+            <div class="offset-sm-2 offset-md-3 col-sm-10 col-md-8 content-left">
+              <p class="mb-3">Yrityksen verkkosivujen ilme raikastettiin ja sisältö päivitettiin vastaamaan nykytilannetta. Samalla ilmeellä tehtiin myös toisen tuoteperheen sivut. Projekti toteutettiin Wordpress-julkaisualustalla.</p>
+              <a href="#" class="subheading link" data-toggle="modal" data-target="#vanajanModal">Lisää projetista</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section mb-5">
+          <div class="row project-heading-row mb-3">
+            <div class="col-12 col-sm-8 col-md-6 order-sm-last content-left mb-3">
+              <a href="#"><img src="img/senni.jpg"></a>
+            </div>
+            <div class="col-12 col-sm-4 col-md-6 content-right">
+              <h3>Senni <br>Aleksandra</h3> 
+            </div>
+          </div>
+          <div class="row ml-3">
+           <div class="offset-md-1 col-sm-10 col-md-8 content-right">
+              <p class="mb-3">Senni Aleksandran portfoliosivujen ulkoasu päivitettiin ja uusien projektien lisäämisestä sivustolle tehtiin helpompaa. Sivusto toteutettiin Wordpressin päälle.</p>
+              <a href="#" class="subheading link" data-toggle="modal" data-target="#senniModal">Lisää projetista</a>
+            </div>   
+          </div>
+        </div>
+
+        <div class="project-section mb-5">
+          <div class="row project-heading-row mb-3">
+            <div class="col-12 col-sm-8 col-md-6 content-right portfolio-image-container mb-3">
+              <a href="#"><img src="img/viljatar.jpg"></a>
+            </div>
+            <div class="col-12 col-sm-4 col-md-6 content-left">
+              <h3>Bobcatsss <br>2017</h3>
+            </div>
+          </div>
+          <div class="row ml-3">
+            <div class="offset-sm-2 offset-md-3 col-sm-10 col-md-8 content-left">
+              <p class="mb-3">Konferenssin verkkosivujen graafisessa toteutuksessa käytettiin paljon yhtenäisiä elementtejä muun konferenssimateriaalin kanssa. Sivusto toteutettiin Wordpress-julkaisualustalla.</p>
+              <a href="#" class="subheading link" data-toggle="modal" data-target="#bobcatsssModal">Lisää projektista</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services" class="frame">
+      <div class="container-fluid no-gutters">
+          <h2 class="offset-md-3 mb-5">Periaatteet & arvot</h2>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-2"><h3 class="subheading">Kestävyys</h3></div>
+            <div class="col-md-4"><p>Koska verkkosivujen tekeminen on suuri ponnistus yritykselle, haluan, että ne on tehty niin, että ne kestävät aikaa. Tämä tarkoittaa sitä, että ne on teknisesti lujalla pohjalla ja huolella tehty. Sekä sitä, että niissä on käytetty sen hetkisesti uusimpia suunnitteluperiaatteita.</p></div>   
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-2"><h3 class="subheading">Kehitys</h3></div>
+            <div class="col-md-4"><p>Kehitystä ei tapahdu, jollei lähde hakemaan jotain uutta ja opettelemaan. Mä pyrin käyttämään uusimpia tekniikoita ja tekemään myös asioita, mitkä tuntuu aluksi vaikeilta.</p></div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-2"><h3 class="subheading">Rehellisyys</h3></div>
+            <div class="col-md-4"><p>Kerron tarkalleen, mitä kannattaa tehdä ja mitä se maksaa. Kerron myös, jos jotain ei mun mielestä kannata tehdä.</p></div>
+          </div>
+      </div>
+    </section>
+
+    <section id="contact" class="text-center">
+      <div class="container">
+        <h2 class="mb-3">Ota yhteyttä</h2>
+        <div class="row">
+          <div class="col-12">
+            <img src="img/tanjaisona.jpg" class="self-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="contact-text">
+              <a class="email" href="mailto:thintsanen@gmail.com" target="_top">thintsanen@gmail.com</a>
+              <p class="">(+358) 44 304 89 10</p></div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="vanajanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times fa-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body mx-5">
+            <h2>Vanajan & Viljatar</h2>
+            <h3 class="subheading mb-3">Sivut uudelle tuoteperheelle ja ulkoasun päivitys</h3>
+            <p class="mb-5">Yritykselle tehtiin kokonaan uudet verkkosivut uudelle Viljatar-tuoteperheelle. Sivustolla käytetty graafinen ilme siirrettiin myös Vanajan-sivuille. Projektissa käytettiin pohjalla Wordpress-julkaisualustaa ja kahden eri sivuston yhdistämisessä käytettiin hyväksi Wordpressin multisite-ominaisuutta, joka mahdollistaa useamman verkkosivun helpomman päivittämisen. Sivustot tehtiin kahdella eri kieliversiolla.</p>
+            <img src="img/viljatar-kuvankaappaus.png">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="senniModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times fa-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body mx-5">
+            <h2>Senni Aleksandra</h2>
+            <h3 class="subheading mb-3">Uusi ilme ja  käyttöliittymän päivitys</h3>
+            <p class="mb-5">Senni Aleksandran portfoliosivujen ulkoasu päivitettiin ja uusien projektien lisäämisestä sivustolle tehtiin helpompaa. Sivusto toteutettiin Wordpressin päälle.</p>
+            <img src="img/viljatar-kuvankaappaus.png">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="bobcatsssModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times fa-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body mx-5">
+            <h2>Bobcatsss 2017</h2>
+            <h3 class="subheading mb-3">Tapahtuman sivujen suunnittelu ja päivitys</h3>
+            <p class="mb-5">Konferenssin verkkosivujen graafisessa toteutuksessa käytettiin paljon yhtenäisiä elementtejä muun konferenssimateriaalin kanssa. Sivusto toteutettiin Wordpress-julkaisualustalla.</p>
+            <img src="img/viljatar-kuvankaappaus.png">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+
+</html>
