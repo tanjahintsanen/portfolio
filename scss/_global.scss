@@ -50,14 +50,9 @@ a.no-borders{border:2px solid transparent;}
 a.no-borders:hover{border:2px solid transparent;}
 
 /** BRAND **/
-.brand:hover > #first-name{
-  margin-left: 0;
-  transition: 0.4s;
-}
-
 #first-name{
   display:block;
-  margin-left: -1.5rem;
+  margin-left: 0;
   transition: 0.4s;
   margin-bottom: -5px;
 }
@@ -239,7 +234,7 @@ section, footer{
 	background-color: white;
   position: relative;
   overflow: hidden;
-  padding-top: calc(2rem);
+  padding-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 4rem;
@@ -261,49 +256,49 @@ section, footer{
 }
 
 #welcome{
-	min-height: 100vh;
-	padding-top: calc(10rem + 0px);
+	padding-top: 8rem;
 }
 
 /** PROJECT IMAGES TEST **/
-.project-img-container {
+.project-thumbs {
   position: relative;
-  width: 50%;
 }
-
-.image {
+.project-thumbs .project-img-container {
+  background: #fff;
+  position: relative;
+}
+.project-thumbs .project-img-container a,
+.project-thumbs .project-img-container a img {
   display: block;
-  width: 100%;
-  height: auto;
+  position: relative;
+  border: none;
+  max-width: 230px;
+  margin: auto;
 }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: $orange;
+.project-thumbs .project-img-container a {
   overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
 }
-
-.project-img-container:hover .overlay {
-  width: 100%;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
+.project-thumbs .project-img-container a div {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+  background: #333;
+  width: 100%;
+  height: 100%;
+  padding-top: 7rem;
 }
+.project-thumbs .project-img-container a div span {
+  text-transform: uppercase;
+  color: white;
+}
+
+/* PROFILE IMAGE*/
+.profile-img{
+  border-radius: 50%;
+}
+.profile-txt{
+  font-size: 1.3rem;
+}
+
+
 /* VALUES */
 .frame {
 	background-color: $primary;
@@ -373,19 +368,26 @@ section, footer{
   h3{font-size: 2.5rem;}
 
   section {
-    padding-top: calc(1rem + 55px);
+    padding-top: 3rem;
     padding-bottom: 3rem;
     margin-bottom: 0;
   }
   #welcome{
-  	padding-top: calc(7rem);		
+  	padding-top: 7rem;		
   }	
   .brand-and-info{
   	margin-bottom: 5rem;
   }
-  #first-name{
-	  margin-left: -2.5rem;
-	}
+
+  .project-thumbs .project-img-container a,
+  .project-thumbs .project-img-container a img {
+    max-width: 300px;
+  }
+
+  .profile-txt{
+    font-size: 1.5rem;
+  }
+
 	.subheading{
 		font-size: 1.5rem;
 	}
@@ -395,7 +397,7 @@ section, footer{
 	.frame {
 		background-color: $primary;
 		padding: 4rem;
-		margin: 0 8rem;
+		margin: 3rem 8rem;
 	}
 	.self-img{
 		padding: 2rem 4rem;
