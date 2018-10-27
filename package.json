@@ -1,36 +1,26 @@
 {
-  "title": "One Page Wonder",
-  "name": "startbootstrap-one-page-wonder",
+  "title": "Tanja Hintsanen Portfolio",
+  "name": "tanja-hintsanen-portfolio",
   "version": "4.1.1",
-  "description": "A one page HTML template built with Bootstrap",
+  "description": "Designer & Developer portfolio",
   "keywords": [
     "css",
     "sass",
     "html",
-    "responsive",
-    "theme",
-    "template"
+    "responsive"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/one-page-wonder",
+  "homepage": "https://www.tanjahintsanen.com",
   "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/issues",
-    "email": "feedback@startbootstrap.com"
+    "email": "thintsanen@gmail.com"
   },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-one-page-wonder.git"
-  },
+  "author": "Tanja Hintsanen",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
     "bootstrap": "4.1.1",
     "jquery": "3.3.1"
   },
   "devDependencies": {
-    "browser-sync": "2.24.5",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "3.9.4",
     "gulp-header": "2.0.5",

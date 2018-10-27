@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   @include body-font;
   font-size: 100%;
@@ -37,17 +41,17 @@ p{
 }
 
 a{
-	border-bottom: 2px solid $black;
+	border-bottom: 1px solid $black;
 	color: $black;
 	text-decoration: none;
 	&:hover, &.active{
 		color: $black;
 		text-decoration: none;
-		border-bottom: 2px solid transparent;
+		border-bottom: 1px solid transparent;
 	}
 }
-a.no-borders{border:2px solid transparent;}
-a.no-borders:hover{border:2px solid transparent;}
+a.no-borders{border-bottom:1px solid transparent;}
+a.no-borders:hover{border-bottom:1px solid transparent;}
 
 /** BRAND **/
 #first-name{
@@ -110,7 +114,7 @@ a.no-borders:hover{border:2px solid transparent;}
 
 /* When you mouse over the navigation links, change their color */
 .nav-overlay a:hover, .nav-overlay a:focus {
-    border-bottom: 1px solid $black;;
+    border-bottom: 1px solid $black;
 }
 
 /* Position the close button (top right corner) */
@@ -235,8 +239,6 @@ section, footer{
   position: relative;
   overflow: hidden;
   padding-top: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-bottom: 4rem;
 }
 
@@ -259,35 +261,51 @@ section, footer{
 	padding-top: 8rem;
 }
 
-/** PROJECT IMAGES TEST **/
+/** PROJECT IMAGES **/
 .project-thumbs {
   position: relative;
+  border: none;
+  &:hover{border: none;}
 }
 .project-thumbs .project-img-container {
   background: #fff;
   position: relative;
+  border: none;
+  &:hover{border: none;}
+  &:focus{outline: none;}
 }
 .project-thumbs .project-img-container a,
 .project-thumbs .project-img-container a img {
   display: block;
   position: relative;
   border: none;
-  max-width: 230px;
+  width: 100%;
   margin: auto;
+  &:focus{outline: none;}
+  &:hover{border: none;}
+  background: transparent;
 }
 .project-thumbs .project-img-container a {
   overflow: hidden;
+  border: none;
 }
+
 .project-thumbs .project-img-container a div {
   position: absolute;
-  background: #333;
   width: 100%;
   height: 100%;
   padding-top: 7rem;
+  border: none;
+  background: rgba(33, 32, 30, 0.8);
+  &:focus{outline: none;}
+  &:hover{border: none;}
 }
+
 .project-thumbs .project-img-container a div span {
   text-transform: uppercase;
   color: white;
+  border: none;
+  &:focus{outline: none;}
 }
 
 /* PROFILE IMAGE*/
@@ -295,14 +313,12 @@ section, footer{
   border-radius: 50%;
 }
 .profile-txt{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
-
-/* VALUES */
 .frame {
-	background-color: $primary;
-	padding: 3rem;
+	background-color: $secondary;
+	padding: 3rem 2rem;
 }
 
 .self-img{
@@ -316,50 +332,88 @@ section, footer{
  }
 
  /** MODAL **/
-.modal-header, .modal-footer{
-	border: none;
+
+.modal{
+  padding-right: 0!important;
+  border-radius: 0;
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-content {
+    border: none;
+    border-radius: 0;
+  }
+  .modal-header{
+    border-bottom: none;
+    border-radius: 0;
+    padding: 0;
+    .close {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      right: 22px;
+      top: 22px;
+      width: 32px;
+      height: 32px;
+      opacity: 1;
+      z-index: 100;
+    }
+    .close:hover {
+      opacity: 0.6;
+    }
+    .close:focus{
+      outline: none;
+    }
+    .close:before, .close:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: $black;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    }
+    .close:after {
+      transform: rotate(-45deg);
+    }
+  }
+  .modal-body{
+    margin-top: 7rem;
+    padding-bottom:2rem;
+    h2{
+      font-size: 2.6rem;
+    }
+    h3{
+      font-size: 2.1rem;
+    }
+    .subheading{
+      font-size: 1.7rem;
+    }
+    .frame .subheading{
+      font-size: 1.7rem;
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+    .huomautus p{
+      font-size: 0.9rem;
+    }
+  }
 }
-.modal-body{
-	img{
-		max-width: 100%;
-	}
+
+#bobcatsssModal .modal-content{
+  background: white url("../img/timantit-top.png") no-repeat left top;
 }
 
 /** RESPONSIVE STYLES **/
-
-/** PORTFOLIO BROKEN GRID **/
-
-@media(min-width:580px){
-	.content-left{
-	 	text-align: left;
-	}
-
-	.content-right{
-	 	text-align: right;
-	}
-
-		.project-heading-row .content-left{
-			img{
-				float: left;
-			}
-		 	h3{
-			 	margin-left: -3rem;
-			 	margin-top: 7rem;
-			 	text-align:left;
-		 	}
-		} 
-
-	.project-heading-row .content-right{
-		img{
-			float: right;
-		}
-		h3{
-		 	margin-right: -3rem;
-		 	margin-top: 7rem;
-		 	text-align: right;
-		 }
-	}	
-}
 
 @media (min-width: 992px) {
 
@@ -379,13 +433,16 @@ section, footer{
   	margin-bottom: 5rem;
   }
 
-  .project-thumbs .project-img-container a,
-  .project-thumbs .project-img-container a img {
-    max-width: 300px;
+  .project-img-container {
+    max-width: 30%;
+    border:none;
+    &:hover{
+      border: none;
+    }
   }
 
   .profile-txt{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
 	.subheading{
@@ -395,13 +452,26 @@ section, footer{
 		width: 50px;
 	}
 	.frame {
-		background-color: $primary;
 		padding: 4rem;
 		margin: 3rem 8rem;
 	}
 	.self-img{
 		padding: 2rem 4rem;
 	}
+  .project-page{
+    .project-landing{
+      padding-left: 2rem;
+      padding-top: 2.5rem;
+      height: 100vh;
+      #first-name{
+        margin-left: -0.5rem;
+      }
+      .brand:hover > #first-name{ 
+        margin-left: 0;
+        transition: 0.6s;
+      }
+    }
+  }
 }
 
 

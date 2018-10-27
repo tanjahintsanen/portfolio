@@ -25,7 +25,17 @@
 
     <!-- Hover direction -->
     <script src="js/modernizr.custom.97074.js"></script>
-    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>  
+    <script type="text/javascript" src="js/jquery.hoverdir.js"></script> 
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="theme-color" content="transparent">
+
 
     <script>
       /* Open */
@@ -55,13 +65,41 @@
       });
     </script>
 
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script> 
+
   </head>
 
   <body>
 
-    
     <!-- Navigation -->
     <nav class="fixed-top">
+
+      <!-- The button -->
       <button id="nav-button" class="navbar-toggler" type="button" onclick="openNav()">
         <div id="nav-icon">
           <span></span>
@@ -72,19 +110,16 @@
 
       <!-- The overlay -->
       <div id="myNav" class="nav-overlay">
-
-
-        <!-- Overlay content -->
         <div class="nav-overlay-content">
           <ul>
             <li><a onclick="closeNav()" class="nav-link subheading" href="#welcome">Lyhyesti</a></li>
             <li><a onclick="closeNav()" class="nav-link subheading" href="#projects">Projektit</a></li>
-            <li><a onclick="closeNav()" class="nav-link subheading" href="#services">Periaatteet</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="#services">Palvelut</a></li>
             <li><a onclick="closeNav()" class="nav-link subheading" href="#contact">Ota yhteyttä</a></li>
           </ul>
         </div>
-
       </div>
+
     </nav>
 
     <section id="welcome" class="text-left">
@@ -99,135 +134,81 @@
           <div class="row justify-content-center mx-3 mb-3">
             <div class="col-lg-8">
               <div>
-                <p class="mb-3 text-center">Web designer & developer Tampereelta. Suunnittelen ja toteutan verkkosivuja pienille yhteisöille ja tapahtumille. Sinun tavoitteesi on minun tavoitteeni. Suunnitellaan yhdessä juuri sinun tarpeisiisi sopiva verkkopalvelu. Tehdään rauhassa ja tehdään huolella. Teen nettisivuja pääasiassa Wordpress-alustalle, mutta muustakin voidaan sopia. </p>
+                <p class="mb-3 text-center">Suunnittelen ja toteutan digitaalisia kokemuksia yksityisille ihmisille, pienille yhteisöille ja tapahtumille. Salainen tukikohtani sijaitsee Tampereella, mutta matkustan mielelläni, joten ei anneta etäisyyden tulla väliimme. Joten jos sinulla on kutkuttavaa projektia tiedossa ja olet tekijää vailla, ota yhteyttä!</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row mt-5 justify-content-center">
-          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Tutustu töihin</a></div>
-          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Palvelut & periaatteet</a></div>
-          <div class="col-sm-4 mb-3 text-center"><a href="#projects" class="subheading link">Ota yhteyttä</a></div>
+        <div class="row mt-5 mx-lg-3 justify-content-center">
+          <div class="col-sm-4 text-center mb-2"><a href="#projects" class="subheading link">Tutustu töihin</a></div>
+          <div class="col-sm-4 text-center mb-2"><a href="#services" class="subheading link">Palvelut</a></div>
+          <div class="col-sm-4 text-center mb-2"><a href="#contact" class="subheading link">Ota yhteyttä</a></div>
         </div>
       </div>
     </section>
 
     <section id="projects">
-      <div class="container">
+      <div class="container-fluid no-gutters">
         <div id="project-thumbs" class="project-thumbs row justify-content-center no-gutters">
+
           <div class="col-12 col-md-auto project-img-container">
-            <a href="#" data-toggle="modal" data-target="#senniModal">
+            <a href="#" class="no-border" data-toggle="modal" data-target="#vanajanViljatarModal">
               <img src="img/viljatar.jpg" alt="project_image" class="image">
-              <div class="text-center">
+              <div class="text-center d-none d-md-block">
                 <span class="subheading">Vanajan & Viljatar</span>
               </div>
             </a>
           </div>
+
           <div class="col-12 col-md-auto project-img-container">
-            <a href="#" data-toggle="modal" data-target="#senniModal">
-              <img src="img/viljatar.jpg" alt="project_image" class="image">
-              <div class="text-center">
-                <span class="subheading">Vanajan & Viljatar</span>
+            <a href="#" class="no-border" data-toggle="modal" data-target="#bobcatsssModal">
+              <img src="img/bobcatsss-taustalla.jpg" alt="project_image" class="image">
+              <div class="text-center d-none d-md-block">
+                <span class="subheading">Bobcatsss 2017</span>
               </div>
             </a>
           </div>
+
           <div class="col-12 col-md-auto project-img-container">
-            <a href="#" data-toggle="modal" data-target="#senniModal">
+            <a href="#" class="no-border" data-toggle="modal" data-target="#senniAleksandraModal">
               <img src="img/senni.jpg" alt="project_image" class="image">
-              <div class="text-center">
+              <div class="text-center d-none d-md-block">
                 <span class="subheading">Senni Aleksandra</span>
               </div>
             </a>
           </div>
+
         </div>
       </div>
     </section>
-<!--
-    <section id="projects" class="text-left">
-      <div class="container">
-        <h2 class="offset-lg-2 mb-5">Projektit</h2>
-        <div class="project-section mb-5">
-          <div class="row project-heading-row mb-3">
-            <div class="col-12 col-sm-8 col-md-6 content-right portfolio-image-container mb-3">
-              <a href="#"><img src="img/viljatar.jpg"></a>
-            </div>
-            <div class="col-12 col-sm-4 col-md-6 content-left">
-              <h3>Vanajan & <br>Viljatar</h3>
-            </div>
-          </div>
-          <div class="row ml-3">
-            <div class="offset-sm-2 offset-md-3 col-sm-10 col-md-8 content-left">
-              <p class="mb-3">Yrityksen verkkosivujen ilme raikastettiin ja sisältö päivitettiin vastaamaan nykytilannetta. Samalla ilmeellä tehtiin myös toisen tuoteperheen sivut. Projekti toteutettiin Wordpress-julkaisualustalla.</p>
-              <a href="#" class="subheading link" data-toggle="modal" data-target="#vanajanModal">Lisää projetista</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-section mb-5">
-          <div class="row project-heading-row mb-3">
-            <div class="col-12 col-sm-8 col-md-6 order-sm-last content-left mb-3">
-              <a href="#"><img src="img/senni.jpg"></a>
-            </div>
-            <div class="col-12 col-sm-4 col-md-6 content-right">
-              <h3>Senni <br>Aleksandra</h3> 
-            </div>
-          </div>
-          <div class="row ml-3">
-           <div class="offset-md-1 col-sm-10 col-md-8 content-right">
-              <p class="mb-3">Senni Aleksandran portfoliosivujen ulkoasu päivitettiin ja uusien projektien lisäämisestä sivustolle tehtiin helpompaa. Sivusto toteutettiin Wordpressin päälle.</p>
-              <a href="#" class="subheading link" data-toggle="modal" data-target="#senniModal">Lisää projetista</a>
-            </div>   
-          </div>
-        </div>
-
-        <div class="project-section mb-5">
-          <div class="row project-heading-row mb-3">
-            <div class="col-12 col-sm-8 col-md-6 content-right portfolio-image-container mb-3">
-              <a href="#"><img src="img/viljatar.jpg"></a>
-            </div>
-            <div class="col-12 col-sm-4 col-md-6 content-left">
-              <h3>Bobcatsss <br>2017</h3>
-            </div>
-          </div>
-          <div class="row ml-3">
-            <div class="offset-sm-2 offset-md-3 col-sm-10 col-md-8 content-left">
-              <p class="mb-3">Konferenssin verkkosivujen graafisessa toteutuksessa käytettiin paljon yhtenäisiä elementtejä muun konferenssimateriaalin kanssa. Sivusto toteutettiin Wordpress-julkaisualustalla.</p>
-              <a href="#" class="subheading link" data-toggle="modal" data-target="#bobcatsssModal">Lisää projektista</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
--->
     <section>
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="col-12 col-md-auto text-center">
             <img class="profile-img" src="img/profiili.jpg">
           </div>
-          <div class="col-12 col-md-6 py-4 pl-5">
-            <p class="profile-txt mb-2">Bonbon bear claw sweet cheesecake donut soufflé. Bonbon ice cream jelly-o sesame snaps biscuit sweet roll. Topping tootsie roll powder donut.</p>
-            <span class="subheading">Tanja Hintsanen</span>
+          <div class="col-12 col-md-6 pl-5">
+            <p class="profile-txt pt-5">Pidän jokaisen projektin tavoitteena, että lopullinen tuote ylittää asiakkaan odotukset. Koska haluan olla ylpeä jokaisesta työstäni, mikään vähempi ei tulisi kuuloonkaan.</p>
           </div>
         </div>
       </div>  
     </section>
-    
+
     <section id="services" class="frame">
       <div class="container-fluid no-gutters">
-          <h2 class="text-center mb-5">Palvelut & periaatteet</h2>
+          <h2 class="text-center mb-5">Näin se homma toimii</h2>
           <div class="row no-gutters justify-content-center mb-5 mx-xl-5">
-            <div class="col-md-3"><h3 class="subheading">Kestävyys</h3></div>
-            <div class="col-md-6"><p>Koska verkkosivujen tekeminen on suuri ponnistus yritykselle, haluan, että ne on tehty niin, että ne kestävät aikaa. Tämä tarkoittaa sitä, että ne on teknisesti lujalla pohjalla ja huolella tehty. Sekä sitä, että niissä on käytetty sen hetkisesti uusimpia suunnitteluperiaatteita.</p></div>   
+            <div class="col-md-3"><h3 class="subheading">Suunnittelu</h3></div>
+            <div class="col-md-6"><p>Projektin suunnittelu lähtee aina liikkeelle mahdollisten ongelmien, tavoitteiden ja aikataulun asettamisesta. Voit olla varma, että pääset vaikuttamaan projektin etenemiseen koko prosessin ajan.</p></div>   
           </div>
           <div class="row no-gutters justify-content-center mb-5 mx-xl-5">
-            <div class="col-md-3"><h3 class="subheading">Kehitys</h3></div>
-            <div class="col-md-6"><p>Kehitystä ei tapahdu, jollei lähde hakemaan jotain uutta ja opettelemaan. Mä pyrin käyttämään uusimpia tekniikoita ja tekemään myös asioita, mitkä tuntuu aluksi vaikeilta.</p></div>
+            <div class="col-md-3"><h3 class="subheading">Toteutus</h3></div>
+            <div class="col-md-6"><p>Useimmiten tekemäni verkkosivut on toteutettu Wordpress-julkaisualustalle, mutta myös muista ratkaisuista voidaan sopia. Työni nuodattavat aina voimassa olevia standardeja ja verkkojulkaisemisen hyviä periaatteita.</p></div>
           </div>
           <div class="row no-gutters justify-content-center mb-5 mx-xl-5">
-            <div class="col-md-3"><h3 class="subheading">Rehellisyys</h3></div>
-            <div class="col-md-6"><p>Kerron tarkalleen, mitä kannattaa tehdä ja mitä se maksaa. Kerron myös, jos jotain ei mun mielestä kannata tehdä.</p></div>
+            <div class="col-md-3"><h3 class="subheading">Ylläpito</h3></div>
+            <div class="col-md-6"><p>Halutessanne voin vastata verkkosivujenne ylläpidosta myös jatkossa. Pidän huolta siitä, että sivustonne toimii vastedeskin turvallisesti ja moitteetta.</p></div>
           </div>
       </div>
     </section>
@@ -235,87 +216,192 @@
     <section id="contact" class="text-center">
       <div class="container">
         <h2 class="mb-3">Ota yhteyttä</h2>
-        <!--
-        <div class="row">
-          <div class="col-12">
-            <img src="img/tanjaisona.jpg" class="self-img">
-          </div>
-        </div>-->
-        <div class="row">
+        <div class="row mb-5">
           <div class="col-12 text-center">
             <div class="contact-text">
               <a class="email" href="mailto:thintsanen@gmail.com" target="_top">thintsanen@gmail.com</a>
-              <p class="">(+358) 44 304 89 10</p></div>
+              <p class="">(+358) 44 304 89 10</p>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
-    <!--
-    <div class="modal fade" id="vanajanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+    <!-- MODAL -->
+
+    <!-- VANAJAN & VILJARAR MODAL -->
+    <div class="modal fade" id="vanajanViljatarModal" tabindex="-1" role="dialog" aria-labelledby="vanajanViljatarModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
+
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <i class="fas fa-times fa-lg"></i>
-            </button>
+            <a class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </a>
           </div>
-          <div class="modal-body mx-5">
-            <h2>Vanajan & Viljatar</h2>
-            <h3 class="subheading mb-3">Sivut uudelle tuoteperheelle ja ulkoasun päivitys</h3>
-            <p class="mb-5">Yritykselle tehtiin kokonaan uudet verkkosivut uudelle Viljatar-tuoteperheelle. Sivustolla käytetty graafinen ilme siirrettiin myös Vanajan-sivuille. Projektissa käytettiin pohjalla Wordpress-julkaisualustaa ja kahden eri sivuston yhdistämisessä käytettiin hyväksi Wordpressin multisite-ominaisuutta, joka mahdollistaa useamman verkkosivun helpomman päivittämisen. Sivustot tehtiin kahdella eri kieliversiolla.</p>
-            <img src="img/viljatar-kuvankaappaus.png">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+
+          <div class="modal-body">
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center">
+                  <h2>Vanajan & Viljatar</h2>
+                </div>
+                <div class="col-12 col-md-10 text-center mb-3">
+                  <h3 class="subheading">Herkkuja Hämeenlinnasta</h3>
+                </div>
+                <div class="col-12 col-md-10 px-md-5 text-center my-4 mb-5">
+                  <p>Vanajan Keksit on perinteinen suomalainen yritys, joka valmistaa keksejä, korppuja ja vohveleita korkealaatuisista raaka-aineista. Vanajan Keksien tehdas perustettiin 1960-luvulla silloiseen Vanajan kuntaan. Tehdas rakennettiin jauhomyllyn läheisyyteen, jotta raaka-aineita voitiin siirtää helposti tehtaan ja myllyn välillä. Nykyään yrityksellä on kaksi brändiä, Vanajan ja Viljatar. Viljattaren tuotteet sisältävät  suosituimpia Vanajan Keksien tuotteita pakattuna kätevän kokoisiin pakkauksiin.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row justofy-content-center">
+                <div class="col mb-5">
+                   <img src="img/korppuja_ja_mustikoita.jpg">
+                </div>
+              </div>
+            </div>
+         
+            <div class="container">
+              <div class="row justify-content-center text-center mx-3">
+                <div class="col-12 col-md-10 mb-3">
+                  <h3 class="subheading">Ulkoasun ja sisällön päivitys</h3>
+                </div>
+                <div class="col-12 col-md-10 mb-5">
+                  <p>Toteutin toiset verkkosivut uudelle Viljatar-tuoteperheelle, jossa on valikoima Vanajan Keksien suosituimpia tuotteita. Toteutin myös sivustojen sisällönsyötön. Sivustolla käytetty ulkoasu laajennettiin koskemaan myös Vanajan-tuoteperheen sivuja. Samalla sivuston sisältöä päivitettiin ja yhtenäistettiin Viljatar-sivuston kanssa. Molemmat sivustot tehtiin Wordpress-julkaisualustan päälle ja molemmista tehtiin myös englanninkieliset versiot.</p>
+                </div>
+                <div class="col-12 col-md-4"><img src="img/minivohvelit_suklaa.jpg"></div>
+                <div class="col-12 col-md-4"><img src="img/suklaahippukeksit.jpg"></div>
+                <div class="col-12 col-md-4"><img src="img/minivohvelit_vanilija.jpg"></div>
+                <div class="col-12 mb-2">
+                <a href="http://www.viljatar.fi/fi/"><button class="btn btn-primary mt-5">Tutustu sivustoon</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container huomautus mt-5"><p>Kaikki kuvat &copy; Vanajan Keksit Oy</p></div>
           </div>
         </div>
       </div>
     </div>
+    <!-- VANAJAN MODAL END -->
 
-    <div class="modal fade" id="senniModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+    <!-- BOBCATSSS MODAL -->
+    <div class="modal fade" id="bobcatsssModal" tabindex="-1" role="dialog" aria-labelledby="bobcatsssModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
+
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <i class="fas fa-times fa-lg"></i>
-            </button>
+            <a class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </a>
           </div>
-          <div class="modal-body mx-5">
-            <h2>Senni Aleksandra</h2>
-            <h3 class="subheading mb-3">Uusi ilme ja  käyttöliittymän päivitys</h3>
-            <p class="mb-5">Senni Aleksandran portfoliosivujen ulkoasu päivitettiin ja uusien projektien lisäämisestä sivustolle tehtiin helpompaa. Sivusto toteutettiin Wordpressin päälle.</p>
-            <img src="img/viljatar-kuvankaappaus.png">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+
+          <div class="modal-body">
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-8 text-center mb-3 mt-3">
+                  <img src="img/bobcatsss-logo.jpg">
+                </div>
+                <div class="col-12 col-md-10 px-md-5 text-center my-4 mb-5">
+                  <p>Bobcatsss on kansainvälinen kirjasto- ja informaatioalan opiskelijakonferenssi, joka järjestetään vuosittain jossain Euroopan maassa. Vuonna 2017 konferenssi järjestettiin Tampereella ja sen pääjärjestäjinä toimivat Tampereen yliopiston informaatiotutkimuksen ja interaktiivisen median opiskelijat. Toimin konferenssin teknisenä vastuuhenkilönä. Konferenssiin osallistui noin 250 alan opiskelijaa, opettajaa ja ammattilaista.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-10 mb-3">
+                  <h3>Projektin eteneminen</h3>
+                </div>
+                <div class="col-12 col-md-10 mb-5">
+                  <p>Tapahtuman järjestäminen aloitettiin noin vuotta ennen itse tapahtumaa. Tapahtuman järjestäminen vaati moniammatillista yhteistyötä ja erilaisiin järjestelytehtäviin osallistui lopulta kymmeniä ihmisiä.</p>
+                </div>
+                <div class="col-12 col-md-10"><img src="img/kokous.jpg"></div>
+                <div class="col-12 col-md-10 my-5">
+                  <p>Verkkosivut olivat olennaisessa asemassa konferenssin tiedoituksen kannalta. Verkkosivujen ulkoasun ja sisällön suunnittelu toteutettiin läheisessä yhteistyössä konferenssin graafikon, markkinointitiimin ja konferenssin akateemisesta sisällöstä vastaavien ihmisten kanssa. Sivuja päivitettiin aktiivisesti noin vuoden ajan ja niiden kautta hoituivat esimerkiksi konferenssin rekisteröiti, ilmoittautuminen sosiaaliseen ohjelmaan ja konferenssin virallinen tiedoitus.</p>
+                </div>
+                <div class="col-112 mb-2">
+                  <a href="http://bobcatsss2017.com/"><button class="btn btn-primary">Tutustu sivustoon</button></a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
+    <!-- BOBCATSSS MODAL END -->
 
-    <div class="modal fade" id="bobcatsssModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+
+    <!-- SENNI ALEKSANDRA MODAL -->
+    <div class="modal fade" id="senniAleksandraModal" tabindex="-1" role="dialog" aria-labelledby="senniAleksandraModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
+
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <i class="fas fa-times fa-lg"></i>
-            </button>
+            <a class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </a>
           </div>
-          <div class="modal-body mx-5">
-            <h2>Bobcatsss 2017</h2>
-            <h3 class="subheading mb-3">Tapahtuman sivujen suunnittelu ja päivitys</h3>
-            <p class="mb-5">Konferenssin verkkosivujen graafisessa toteutuksessa käytettiin paljon yhtenäisiä elementtejä muun konferenssimateriaalin kanssa. Sivusto toteutettiin Wordpress-julkaisualustalla.</p>
-            <img src="img/viljatar-kuvankaappaus.png">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Sulje</button>
+
+          <div class="modal-body">
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center">
+                  <h2>Senni Aleksandra</h2>
+                </div>
+                <div class="col-12 col-md-10 text-center mb-3">
+                  <h3 class="subheading">Kuvataiteilija</h3>
+                </div>
+                <div class="col-12 col-md-10 px-md-5 text-center my-4 mb-5">
+                  <p>Senni Aleksandra on Tampereella työskentelevä kuvataiteilija, joka tutkii taiteellaan ihmiskehoa ja sen haurautta videoiden, valokuvien, kirjonnan ja installaatioiden kautta. Sennin työt ovat moninaisia ja lähestyvät ihmiskehon teemaa yhtäältä erilaisina muotojen kokoelmina ja toisaalta tilallisina olentoina osana ympräsitöään.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col mb-5">
+                   <img src="img/senni-big.jpg">
+                </div>
+              </div>
+            </div>
+            
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-10 mb-3">
+                  <h3 class="subheading">Selkeys ja helppous</h3>
+                </div>
+                <div class="col-12 col-md-10 mb-5">
+                  <p>Senni Aleksandran töiden moninaisuus ja monimuotoisuus aiheuttivat haasteita sen hetkisessä verkkoportfoliossaan. Pyrimme ratkaisemaan ongelmaa kuvien selkeämmällä asettelulla ja tekemällä projektiin liittyvien kuvien lisäämisestä yksinkertaisempaa. Senni Aleksandran työt muodostavat visuaalisesti niin harmonisen kokonaisuuden, että ne muodostavat sivujen pääsisällön.</p>
+                </div>
+                <div class="col-12 col-md-4"><img src="img/kalenterikollaasi.jpg"></div>
+                <div class="col-12 col-md-4"><img src="img/installaatio-hiedanranta.jpg"></div>
+                <div class="col-12 col-md-4"><img src="img/kirjonta.jpg"></div>
+              </div>
+            </div>
+         
+            <div class="container">
+              <div class="row justify-content-center text-center mx-3 mt-5">
+                
+                <div class="col-12 mb-2">
+                  <a href="http://www.sennialeksandra.com/"><button class="btn btn-primary">Tutustu sivustoon</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container huomautus mt-5"><p>Kaikki kuvat &copy; Senni Aleksandra</p></div>
           </div>
         </div>
       </div>
     </div>
+    <!-- SENNI ALEKSANDRA MODAL END -->
 
-    -->
 
   </body>
 

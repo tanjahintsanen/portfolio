@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Designer & developer">
+    <meta name="author" content="Tanja Hintsanen">
+
+    <title>Tanja Hintsanen - Web designer & developer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald:300|Ubuntu:300,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Hover direction -->
+    <script src="js/modernizr.custom.97074.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>  
+
+    <script>
+      /* Open */
+      function openNav() {
+        var menuOverlay = document.getElementById("myNav");
+        var menuIcon = document.getElementById("nav-icon");
+        var menuButton = document.getElementById("nav-button");
+        menuOverlay.style.height = "100%";
+        menuButton.setAttribute("onClick", "closeNav()");
+        menuIcon.classList.add('open');
+      }
+      /* Close */
+      function closeNav() {
+        var menuOverlay = document.getElementById("myNav");
+        var menuIcon = document.getElementById("nav-icon");
+        var menuButton = document.getElementById("nav-button");
+        menuOverlay.style.height = "0%";
+        menuButton.setAttribute("onClick", "openNav()");
+        menuIcon.classList.remove('open');
+      }
+    </script>
+
+    <script type="text/javascript">
+      /* Hover direction */
+      $(function() {
+        $(' #project-thumbs > .project-img-container ').each( function() { $(this).hoverdir(); } );
+      });
+    </script>
+
+  </head>
+
+  <body class="project-page">
+ 
+    <!-- Navigation -->
+    <nav class="fixed-top">
+
+      <!-- The button -->
+      <button id="nav-button" class="navbar-toggler" type="button" onclick="openNav()">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <!-- The overlay -->
+      <div id="myNav" class="nav-overlay">
+        <div class="nav-overlay-content">
+          <ul>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="..#welcome">Lyhyesti</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="..#projects">Projektit</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="..#services">Palvelut</a></li>
+            <li><a onclick="closeNav()" class="nav-link subheading" href="..#contact">Ota yhteyttä</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="container-fluid brand-and-info">
+        <h1><a class="brand no-borders" href="#welcome"><span id="first-name">Tanja</span>Hintsanen</a></h1>
+        <h3 class="subheading mb-5">Web designer & developer</h3>
+    </div>
+
+    <section>
+      <div class="project-content">
+      <div class="project-header container-fluid">  
+        <a href="#" class="close" data-dismiss="modal" aria-label="Close"></a>
+        <img src="#" class="project-header-img">
+      </div>
+      <div class="project-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5"><h2>Vanajan & Viljatar</h2></div>
+            <div class="col-12 col-md-7"><p class="mb-5">Yritykselle tehtiin kokonaan uudet verkkosivut uudelle Viljatar-tuoteperheelle. Sivustolla käytetty graafinen ilme siirrettiin myös Vanajan-sivuille. Projektissa käytettiin pohjalla Wordpress-julkaisualustaa ja kahden eri sivuston yhdistämisessä käytettiin hyväksi Wordpressin multisite-ominaisuutta, joka mahdollistaa useamman verkkosivun helpomman päivittämisen. Sivustot tehtiin kahdella eri kieliversiolla.</p></div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row no-gutters">
+            <div class="col-12 col-md-6"><img src="#"></div>
+            <div class="col-12 col-md-6"><img src="#"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5"><h3 class="subheading mb-3">Sivut uudelle tuoteperheelle ja ulkoasun päivitys</h3></div>
+            <div class="col-12 col-md-7"><p class="mb-5">Yritykselle tehtiin kokonaan uudet verkkosivut uudelle Viljatar-tuoteperheelle. Sivustolla käytetty graafinen ilme siirrettiin myös Vanajan-sivuille. Projektissa käytettiin pohjalla Wordpress-julkaisualustaa ja kahden eri sivuston yhdistämisessä käytettiin hyväksi Wordpressin multisite-ominaisuutta, joka mahdollistaa useamman verkkosivun helpomman päivittämisen. Sivustot tehtiin kahdella eri kieliversiolla.</p><a href="#"><button class="btn btn-primary">Tutustu sivustoon</button></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  </body>
+
+</html>
