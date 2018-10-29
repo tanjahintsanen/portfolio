@@ -341,11 +341,11 @@ section, footer {
 
 .project-thumbs .project-img-container a div {
   position: absolute;
+  background: #f9b1b9;
   width: 100%;
   height: 100%;
   padding-top: 7rem;
   border: none;
-  background: rgba(33, 32, 30, 0.8);
 }
 
 .project-thumbs .project-img-container a div:focus {
@@ -354,6 +354,14 @@ section, footer {
 
 .project-thumbs .project-img-container a div:hover {
   border: none;
+}
+
+.project-thumbs .project-img-container a div.bobcatsss {
+  background: #69a18e;
+}
+
+.project-thumbs .project-img-container a div.senni {
+  background: #d0c0ca;
 }
 
 .project-thumbs .project-img-container a div span {
